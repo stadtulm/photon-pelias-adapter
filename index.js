@@ -3,7 +3,6 @@ var url = require('url');
 var fetch = require('node-fetch');
 
 var PHOTON_URL = process.env.PHOTON_URL || "http://photon.komoot.de/"
-var PHOTON_LANG = process.env.PHOTON_LANG || "en"
 
 http.createServer(function (req, res) {
 	let parsedUrl = url.parse(req.url, true)
@@ -36,7 +35,7 @@ function search(params, res) {
 		bboxParam = `&bbox=${params['boundary.rect.min_lon']},${params['boundary.rect.min_lat']},${params['boundary.rect.max_lon']},${params['boundary.rect.max_lat']}`
 	}
 
-	let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${PHOTON_LANG}`
+	let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}`
 	if (bboxParam) {
 		url += bboxParam
 	}
@@ -59,7 +58,7 @@ function search(params, res) {
 
 function reverse(params, res) {
 	if (params['point.lat'] && params['point.lon']) {
-		let url = `${PHOTON_URL}/reverse?lon=${params['point.lon']}&lat=${params['point.lat']}&lang=${PHOTON_LANG}`
+		let url = `${PHOTON_URL}/reverse?lon=${params['point.lon']}&lat=${params['point.lat']}&lang=${params.lang || "en"}`
 		fetch(url).then(res => res.json()).then((json)=>{
 			res.writeHead(200, {
 				'Content-Type': 'application/json',
