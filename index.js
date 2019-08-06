@@ -12,11 +12,9 @@ http.createServer(function (req, res) {
 
 	switch (path) {
 		case "/geocoding/v1/search":
-			console.log("JAU")
 			search(parsedUrl.query, res)
 			break;
 		case "/geocoding/v1/reverse":
-				console.log("JAU")
 				reverse(parsedUrl.query, res)
 				break;
 		default:
@@ -33,9 +31,6 @@ http.createServer(function (req, res) {
 }).listen(8020);
 
 function search(params, res) {
-	//console.log(params.text, res)
-	let reqStart = new Date().valueOf()
-
 	let bboxParam = null
 	if (params['boundary.rect.min_lat'] && params['boundary.rect.max_lat'] && params['boundary.rect.min_lon'] && params['boundary.rect.max_lon']) {
 		bboxParam = `&bbox=${params['boundary.rect.min_lon']},${params['boundary.rect.min_lat']},${params['boundary.rect.max_lon']},${params['boundary.rect.max_lat']}`
@@ -45,17 +40,13 @@ function search(params, res) {
 	if (bboxParam) {
 		url += bboxParam
 	}
-	console.log(url)
 	fetch(url).then(res => res.json()).then((json)=>{
-		//console.log(json)
-		
 		res.writeHead(200, {
 			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*'
 		});
 		res.write(JSON.stringify(translateSearch(json)));
 		res.end();
-		console.log(new Date().valueOf() - reqStart)
 	}).catch(err => {
 		res.writeHead(200, {
 			'Content-Type': 'application/json',
@@ -69,13 +60,11 @@ function search(params, res) {
 function reverse(params, res) {
 	if (params['point.lat'] && params['point.lon']) {
 		let url = `${PHOTON_URL}/reverse?lon=${params['point.lon']}&lat=${params['point.lat']}&lang=${PHOTON_LANG}`
-		console.log(url)
 		fetch(url).then(res => res.json()).then((json)=>{
 			res.writeHead(200, {
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': '*'
 			});
-			console.log(JSON.stringify(json))
 			res.write(JSON.stringify(translateReverse(json)));
 			res.end();
 		}).catch(err => {
@@ -102,7 +91,6 @@ function translateSearch(photonResult) {
 		features: []
 	}
 	photonResult.features.forEach(feature => {
-		//console.log(feature.properties)
 		if (feature.properties.state) {
 			feature.properties.region = feature.properties.state
 			delete feature.properties.state
@@ -125,7 +113,6 @@ function translateReverse(photonResult){
 		features: []
 	}
 	photonResult.features.forEach(feature => {
-		//console.log(feature.properties)
 		if (feature.properties.state) {
 			feature.properties.region = feature.properties.state
 			delete feature.properties.state
