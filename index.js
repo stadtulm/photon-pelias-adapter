@@ -124,7 +124,7 @@ function translateReverse(photonResult){
 			feature.properties.locality = feature.properties.city
 		}
 		let originalname = feature.properties.name
-		feature.properties.name = `${feature.properties.street ? feature.properties.street : ''} ${feature.properties.housenumber ? feature.properties.housenumber : ''}`
+		feature.properties.name = `${feature.properties.street || ''} ${feature.properties.housenumber || ''}`
 		if (!feature.properties.street && !feature.properties.housenumber && originalname) {
 			feature.properties.name = originalname
 		}
