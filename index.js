@@ -11,10 +11,10 @@ http.createServer(function (req, res) {
 
 
 	switch (path) {
-		case "/geocoding/v1/search":
+		case "/v1/search":
 			search(parsedUrl.query, res)
 			break;
-		case "/geocoding/v1/reverse":
+		case "/v1/reverse":
 				reverse(parsedUrl.query, res)
 				break;
 		default:

@@ -2,8 +2,8 @@ photon-pelias-adapter is a small API proxy to replace pelias geocoder with [phot
 
 Supported pelias APIs:
 
-* `/geocoding/v1/search`
-* `/geocoding/v1/reverse`
+* `/v1/search`
+* `/v1/reverse`
 
 Supported pelias paramters:
 * for `search`
