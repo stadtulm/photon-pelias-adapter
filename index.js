@@ -48,7 +48,7 @@ function search(params, res) {
 		res.write(JSON.stringify(translateSearch(json)));
 		res.end();
 	}).catch(err => {
-		res.writeHead(200, {
+		res.writeHead(500, {
 			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*'
 		});
@@ -68,7 +68,7 @@ function reverse(params, res) {
 			res.write(JSON.stringify(translateReverse(json)));
 			res.end();
 		}).catch(err => {
-			res.writeHead(200, {
+			res.writeHead(500, {
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': '*'
 			});
@@ -77,7 +77,7 @@ function reverse(params, res) {
 		})
 
 	} else {
-		res.writeHead(200, {
+		res.writeHead(400, {
 			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*'
 		});
