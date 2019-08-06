@@ -1,0 +1,15 @@
+{
+  "name": "photon-pelias-adapter",
+  "version": "1.0.0",
+  "description": "adapter to translate pelias requests to photon api",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
