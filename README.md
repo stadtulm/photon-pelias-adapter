@@ -1,4 +1,4 @@
-photon-pelias-adapter is a small API proxy to replace pelias geocoder with [photon](https://photon.komoot.de/).
+photon-pelias-adapter is a small API proxy to replace pelias geocoder with [photon](https://photon.komoot.de).
 
 Supported pelias APIs:
 
@@ -17,4 +17,4 @@ Supported pelias paramters:
 Configuration:
 
 * Set port via `PORT` environment variable. Default `8080`.
-* Set Photon endpoint via environment variable `PHOTON_URL`. Default `http://photon.komoot.de/`.
+* Set Photon endpoint via environment variable `PHOTON_URL`. Default `https://photon.komoot.de`.

@@ -2,7 +2,7 @@ var http = require('http');
 var url = require('url');
 var fetch = require('node-fetch');
 
-var PHOTON_URL = process.env.PHOTON_URL || "http://photon.komoot.de/"
+var PHOTON_URL = process.env.PHOTON_URL || "https://photon.komoot.de"
 var PORT = process.env.PORT || 8080
 
 http.createServer(function (req, res) {
