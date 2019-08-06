@@ -3,6 +3,7 @@ var url = require('url');
 var fetch = require('node-fetch');
 
 var PHOTON_URL = process.env.PHOTON_URL || "http://photon.komoot.de/"
+var PORT = process.env.PORT || 8080
 
 http.createServer(function (req, res) {
 	let parsedUrl = url.parse(req.url, true)
@@ -27,7 +28,7 @@ http.createServer(function (req, res) {
 	}
 	
 
-}).listen(8020);
+}).listen(PORT);
 
 function search(params, res) {
 	let bboxParam = null
