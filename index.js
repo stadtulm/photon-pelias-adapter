@@ -57,7 +57,7 @@ function search(params, res) {
 			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*'
 		});
-		res.write(JSON.stringify(translateSearch(json)));
+		res.write(JSON.stringify(translateResults(json)));
 		res.end();
 	}).catch(err => {
 		res.writeHead(500, {
@@ -77,7 +77,7 @@ function reverse(params, res) {
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': '*'
 			});
-			res.write(JSON.stringify(translateReverse(json)));
+			res.write(JSON.stringify(translateResults(json)));
 			res.end();
 		}).catch(err => {
 			res.writeHead(500, {
@@ -98,29 +98,8 @@ function reverse(params, res) {
 	}
 }
 
-function translateSearch(photonResult) {
-	let peliasResponse = {
-		features: []
-	}
-	photonResult.features.forEach(feature => {
-		if (feature.properties.state) {
-			feature.properties.region = feature.properties.state
-			delete feature.properties.state
-		}
-		if (feature.properties.postcode) {
-			feature.properties.postalcode = feature.properties.postcode
-			delete feature.properties.postcode
-		}
-		if (feature.properties.city) {
-			feature.properties.locality = feature.properties.city
-		}
-		
-		peliasResponse.features.push(feature)
-	});
-	return peliasResponse
-}
 
-function translateReverse(photonResult){
+function translateResults(photonResult){
 	let peliasResponse = {
 		features: []
 	}
