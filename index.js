@@ -18,12 +18,7 @@ http
         reverse(parsedUrl.query, res);
         break;
       default:
-        res.writeHead(404, {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        });
-        res.write('{"error": "path not found"}');
-        res.end();
+		  writeError(res, 404, "path not found")
         break;
     }
   })
@@ -61,6 +56,10 @@ function search(params, res) {
   fetch(url)
     .then(res => res.json())
     .then(json => {
+		if (!json.features) {
+			writeError(res, 500, "no result from service")
+			return
+		}
       res.writeHead(200, {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
@@ -69,12 +68,7 @@ function search(params, res) {
       res.end();
     })
     .catch(err => {
-      res.writeHead(500, {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      });
-      res.write(JSON.stringify({ error: err }));
-      res.end();
+		writeError(res, 500, err)
     });
 }
 
@@ -92,20 +86,10 @@ function reverse(params, res) {
         res.end();
       })
       .catch(err => {
-        res.writeHead(500, {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        });
-        res.write(JSON.stringify({ error: err }));
-        res.end();
+		  writeError(res, 500, err)
       });
   } else {
-    res.writeHead(400, {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-    });
-    res.write(JSON.stringify({ error: "point.lat and point.lon are required" }));
-    res.end();
+	writeError(res, 400, "point.lat and point.lon are required")
   }
 }
 
@@ -142,4 +126,13 @@ function translateResults(photonResult) {
     peliasResponse.features.push(feature);
   });
   return peliasResponse;
+}
+
+function writeError(res, statusCode, errorMessage) {
+	res.writeHead(statusCode, {
+		"Content-Type": "application/json",
+		"Access-Control-Allow-Origin": "*"
+	  });
+	  res.write(JSON.stringify({ error: errorMessage }));
+	  res.end();
 }
