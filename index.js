@@ -32,6 +32,18 @@ http.createServer(function (req, res) {
 
 function search(params, res) {
 	let bboxParam = null
+	
+	//ignore GTFS stop requests. Used by digitransit
+	if (params['sources'].includes("gtfs")){
+		res.writeHead(404, {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*'
+		});
+		res.write(JSON.stringify({error: "no gtfs", features: []}))
+		res.end()
+		return
+	}
+
 	if (params['boundary.rect.min_lat'] && params['boundary.rect.max_lat'] && params['boundary.rect.min_lon'] && params['boundary.rect.max_lon']) {
 		bboxParam = `&bbox=${params['boundary.rect.min_lon']},${params['boundary.rect.min_lat']},${params['boundary.rect.max_lon']},${params['boundary.rect.max_lat']}`
 	}
