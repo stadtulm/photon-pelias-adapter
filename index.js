@@ -111,7 +111,7 @@ function translateResults(photonResult) {
     }
     let originalname = feature.properties.name;
     feature.properties.name = `${feature.properties.street || ""} ${feature.properties.housenumber || ""}`;
-    if (!feature.properties.street && !feature.properties.housenumber && originalname) {
+    if ((!feature.properties.street || !feature.properties.housenumber) && originalname) {
       feature.properties.name = originalname;
     }
     if (
