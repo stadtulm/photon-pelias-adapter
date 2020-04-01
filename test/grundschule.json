@@ -1,0 +1,194 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [9.26732315383207, 49.795355],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 160277043,
+        "osm_type": "W",
+        "extent": [9.2671226, 49.7956221, 9.2677557, 49.7950421],
+        "country": "Germany",
+        "osm_key": "building",
+        "city": "Mönchberg",
+        "street": "Schulstraße",
+        "osm_value": "yes",
+        "postcode": "63933",
+        "name": "Grundschule",
+        "state": "Bavaria"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [9.267054803201846, 49.795457549999995],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 160280883,
+        "osm_type": "W",
+        "extent": [9.2659402, 49.7960135, 9.2681658, 49.7949083],
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Mönchberg",
+        "street": "Schulstraße",
+        "osm_value": "school",
+        "postcode": "63933",
+        "name": "Grundschule",
+        "state": "Bavaria"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.916105851531878, 48.5817624],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 30493484,
+        "extent": [8.9159471, 48.5818246, 8.9162646, 48.5816677],
+        "country": "Germany",
+        "city": "Herrenberg",
+        "postcode": "71083",
+        "osm_type": "W",
+        "osm_key": "amenity",
+        "housenumber": "1",
+        "street": "Waldstraße",
+        "osm_value": "school",
+        "name": "Grundschule",
+        "suburb": "Mönchberg",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.427924161053546, 48.09982905],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 32542269,
+        "osm_type": "W",
+        "extent": [8.427808, 48.0999062, 8.4280519, 48.0996391],
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "9",
+        "city": "Mönchweiler",
+        "street": "Innerdorf",
+        "osm_value": "school",
+        "postcode": "78087",
+        "name": "Grundschule",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.600851516803823, 49.265247],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 542442131,
+        "osm_type": "W",
+        "extent": [8.6002927, 49.2656955, 8.6015969, 49.2645723],
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "St. Leon-Rot",
+        "street": "Schulstraße",
+        "osm_value": "school",
+        "postcode": "68789",
+        "name": "Grundschule Mönchsbergschule",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.847971302410652, 49.33371865],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 264872634,
+        "osm_type": "W",
+        "extent": [8.8477413, 49.3338598, 8.8482013, 49.3335775],
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "102",
+        "city": "Meckesheim",
+        "street": "Hauptstraße",
+        "osm_value": "school",
+        "postcode": "74909",
+        "name": "Grundschule Mönchzell",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.91944287071772, 48.577861150000004],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 30493486,
+        "extent": [8.9193413, 48.57802, 8.9195661, 48.5776413],
+        "country": "Germany",
+        "city": "Herrenberg",
+        "postcode": "71083",
+        "osm_type": "W",
+        "osm_key": "amenity",
+        "housenumber": "3",
+        "street": "Mönchberger Straße",
+        "osm_value": "school",
+        "name": "Grundschule Kayh",
+        "suburb": "Kayh",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.722476337829661, 49.04534815],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 5755143,
+        "extent": [8.7222492, 49.0455211, 8.7231094, 49.0451642],
+        "country": "Germany",
+        "city": "Bretten",
+        "postcode": "75015",
+        "osm_type": "R",
+        "osm_key": "amenity",
+        "housenumber": "3",
+        "street": "Mönchsstraße",
+        "osm_value": "school",
+        "name": "Grundschule Gölshausen",
+        "suburb": "Gölshausen",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.6865031, 49.417557],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 736221550,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "18",
+        "city": "Heidelberg",
+        "street": "Mönchhofstraße",
+        "osm_value": "school",
+        "postcode": "69120",
+        "name": "Mönchhof-Grundschule",
+        "suburb": "Neuenheim",
+        "state": "Baden-Württemberg"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
