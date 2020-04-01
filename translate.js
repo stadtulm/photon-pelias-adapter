@@ -43,6 +43,7 @@ exports.translateResults = photonResult => {
     }
 
     feature.properties.label = getLabel(feature.properties);
+    feature.properties.layer = "venue";
 
     peliasResponse.features.push(feature);
   });

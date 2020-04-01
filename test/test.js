@@ -6,6 +6,7 @@ it("correctly set a label", function() {
   const result = translateResults(input);
   assert.equal(result.features[0].properties.name, "Postbank");
   assert.equal(result.features[0].properties.label, "Postbank, 45128 Essen");
+  assert.equal(result.features[0].properties.layer, "venue");
 
   assert.equal(result.features[10].properties.name, "Postbank");
   assert.equal(result.features[10].properties.label, "Postbank, Dudenstraße, Berlin");
