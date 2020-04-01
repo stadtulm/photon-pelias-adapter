@@ -28,19 +28,6 @@ exports.translateResults = photonResult => {
     if (feature.properties.city) {
       feature.properties.locality = feature.properties.city;
     }
-    let originalname = feature.properties.name;
-    feature.properties.name = `${feature.properties.street || ""} ${feature.properties.housenumber || ""}`;
-    if ((!feature.properties.street || !feature.properties.housenumber) && originalname) {
-      feature.properties.name = originalname;
-    }
-    if (
-      !feature.properties.street &&
-      !feature.properties.housenumber &&
-      !originalname &&
-      feature.properties.postalcode
-    ) {
-      feature.properties.name = feature.properties.postalcode;
-    }
 
     feature.properties.label = getLabel(feature.properties);
     feature.properties.layer = "venue";

@@ -9,10 +9,10 @@ it("correctly set a label", function() {
   assert.equal(result.features[0].properties.layer, "venue");
 
   assert.equal(result.features[10].properties.name, "Postbank");
-  assert.equal(result.features[10].properties.label, "Postbank, Dudenstraße, Berlin");
+  assert.equal(result.features[10].properties.label, "Postbank, Dudenstraße, 10965 Berlin");
 });
 
-it("correctly set a label for Grunschule", function() {
+it("correctly set a label for Grundschule", function() {
   const input = require("./grundschule.json");
   const result = translateResults(input);
   assert.equal(result.features[0].properties.name, "Grundschule");
