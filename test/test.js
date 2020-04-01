@@ -17,4 +17,20 @@ it("correctly set a label for Grundschule", function() {
   const result = translateResults(input);
   assert.equal(result.features[0].properties.name, "Grundschule");
   assert.equal(result.features[0].properties.label, "Grundschule, Schulstraße, 63933 Mönchberg");
+  const names = result.features.map(x => x.properties.name);
+
+  assert.deepEqual(
+    [
+      "Grundschule",
+      "Grundschule",
+      "Grundschule",
+      "Grundschule",
+      "Grundschule Mönchsbergschule",
+      "Grundschule Mönchzell",
+      "Grundschule Kayh",
+      "Grundschule Gölshausen",
+      "Mönchhof-Grundschule"
+    ],
+    names
+  );
 });
