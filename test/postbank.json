@@ -1,0 +1,300 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [7.011538973426834, 51.45054305],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 419502151,
+        "osm_type": "W",
+        "extent": [7.0106444, 51.4508582, 7.0123509, 51.4502655],
+        "country": "Germany",
+        "osm_key": "landuse",
+        "city": "Essen",
+        "osm_value": "commercial",
+        "postcode": "45128",
+        "name": "Postbank",
+        "state": "North Rhine-Westphalia"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [7.012474523340052, 51.4506582],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 35680648,
+        "osm_type": "W",
+        "extent": [7.0121946, 51.4509085, 7.0128015, 51.4503775],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Essen",
+        "osm_value": "pedestrian",
+        "postcode": "45128",
+        "name": "Postbank",
+        "state": "North Rhine-Westphalia"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [6.4454688, 51.1980911],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 338952015,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "6",
+        "city": "Mönchengladbach",
+        "neighbourhood": "Eicken",
+        "street": "Humboldtstraße",
+        "osm_value": "bank",
+        "postcode": "41061",
+        "name": "postbank",
+        "state": "North Rhine-Westphalia"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.4034421, 52.5691493],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1287287816,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Berlin",
+        "street": "Mühlenstraße",
+        "osm_value": "bank",
+        "postcode": "13187",
+        "name": "Postbank",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [11.0310668, 50.9745384],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 6804096173,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Erfurt",
+        "street": "Anger",
+        "osm_value": "bank",
+        "postcode": "99084",
+        "name": "Postbank",
+        "state": "Thuringia"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [10.0424223, 53.5542291],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 660578172,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Hamburg",
+        "street": "Hammer Baum",
+        "osm_value": "bank",
+        "postcode": "20537",
+        "name": "Postbank",
+        "state": "Hamburg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.3035461, 52.5257887],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 482219170,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Berlin",
+        "street": "Osnabrücker Straße",
+        "osm_value": "bank",
+        "postcode": "10589",
+        "name": "Postbank",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.2748851, 52.5367921],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2425870256,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Berlin",
+        "street": "Popitzweg",
+        "osm_value": "bank",
+        "postcode": "13629",
+        "name": "Postbank",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.2775864, 52.5103293],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1819283270,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Berlin",
+        "street": "Soorstraße",
+        "osm_value": "bank",
+        "postcode": "14050",
+        "name": "Postbank",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.493826, 52.6357339],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1347625713,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "23",
+        "city": "Berlin",
+        "street": "Wiltbergstraße",
+        "osm_value": "bank",
+        "postcode": "13125",
+        "name": "Postbank",
+        "suburb": "Buch",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.3846979, 52.4847666],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 447946785,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "city": "Berlin",
+        "street": "Dudenstraße",
+        "osm_value": "bank",
+        "postcode": "10965",
+        "name": "Postbank",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.4237278, 52.4868431],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 420448903,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "1-6",
+        "city": "Berlin",
+        "neighbourhood": "Reuterkiez",
+        "street": "Hermannplatz",
+        "osm_value": "bank",
+        "postcode": "10967",
+        "name": "Postbank",
+        "state": "Berlin"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [12.9958009, 51.5599789],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 5237545632,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "6",
+        "city": "Torgau",
+        "street": "August-Bebel-Straße",
+        "osm_value": "bank",
+        "postcode": "04860",
+        "name": "Postbank",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [12.5203496, 49.1958019],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3575091694,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "26",
+        "city": "Roding",
+        "street": "Schulstraße",
+        "osm_value": "bank",
+        "postcode": "93426",
+        "name": "Postbank",
+        "suburb": "Altstadt",
+        "state": "Bavaria"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [12.0178431, 51.4534891],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3755861515,
+        "osm_type": "N",
+        "country": "Germany",
+        "osm_key": "amenity",
+        "housenumber": "147",
+        "city": "Halle (Saale)",
+        "street": "Leipziger Chaussee",
+        "osm_value": "bank",
+        "postcode": "06112",
+        "name": "Postbank",
+        "state": "Saxony-Anhalt"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}

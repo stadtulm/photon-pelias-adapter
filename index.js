@@ -5,6 +5,8 @@ var fetch = require("node-fetch");
 var PHOTON_URL = process.env.PHOTON_URL || "https://photon.komoot.de";
 var PORT = process.env.PORT || 8080;
 
+const { translateResults } = require("./translate.js");
+
 http
   .createServer(function(req, res) {
     let parsedUrl = url.parse(req.url, true);
@@ -91,41 +93,6 @@ function reverse(params, res) {
   } else {
     writeError(res, 400, "point.lat and point.lon are required");
   }
-}
-
-function translateResults(photonResult) {
-  let peliasResponse = {
-    features: []
-  };
-  photonResult.features.forEach(feature => {
-    if (feature.properties.state) {
-      feature.properties.region = feature.properties.state;
-      delete feature.properties.state;
-    }
-    if (feature.properties.postcode) {
-      feature.properties.postalcode = feature.properties.postcode;
-      delete feature.properties.postcode;
-    }
-    if (feature.properties.city) {
-      feature.properties.locality = feature.properties.city;
-    }
-    let originalname = feature.properties.name;
-    feature.properties.name = `${feature.properties.street || ""} ${feature.properties.housenumber || ""}`;
-    if ((!feature.properties.street || !feature.properties.housenumber) && originalname) {
-      feature.properties.name = originalname;
-    }
-    if (
-      !feature.properties.street &&
-      !feature.properties.housenumber &&
-      !originalname &&
-      feature.properties.postalcode
-    ) {
-      feature.properties.name = feature.properties.postalcode;
-    }
-
-    peliasResponse.features.push(feature);
-  });
-  return peliasResponse;
 }
 
 function writeError(res, statusCode, errorMessage) {

@@ -1,0 +1,292 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [12.558728022189667, 51.350201549999994],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 337025418,
+        "osm_type": "W",
+        "extent": [12.5555681, 51.351867, 12.562834, 51.3489058],
+        "country": "Germany",
+        "osm_key": "landuse",
+        "city": "Borsdorf",
+        "osm_value": "industrial",
+        "postcode": "04451",
+        "name": "Gewerbegebiet Dresdener Landstraße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [10.5123184, 50.0404224],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 39636304,
+        "osm_type": "W",
+        "extent": [10.5115516, 50.0404224, 10.5123429, 50.0403272],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Haßfurt",
+        "osm_value": "residential",
+        "postcode": "97437",
+        "name": "Dresdener Straße",
+        "suburb": "Sylbach",
+        "state": "Bavaria"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [12.9700818, 51.0974582],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 25216401,
+        "osm_type": "W",
+        "extent": [12.9699859, 51.0976184, 12.9700818, 51.0974582],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Hartha",
+        "osm_value": "tertiary",
+        "postcode": "04746",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.4964474, 51.4128434],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 309831369,
+        "osm_type": "W",
+        "extent": [13.4964015, 51.4150962, 13.4966787, 51.4106826],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Röderland",
+        "osm_value": "primary",
+        "postcode": "04932",
+        "name": "Dresdener Straße",
+        "state": "Brandenburg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.0296742, 51.0733523],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 159652603,
+        "osm_type": "W",
+        "extent": [13.0295235, 51.0734955, 13.0299275, 51.0731835],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Waldheim",
+        "osm_value": "secondary",
+        "postcode": "04736",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.3881186, 51.0955492],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 448742573,
+        "osm_type": "W",
+        "extent": [14.3878684, 51.0956408, 14.3883508, 51.0954818],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Wilthen",
+        "osm_value": "secondary",
+        "postcode": "02681",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.909208, 51.1145189],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 776617403,
+        "osm_type": "W",
+        "extent": [13.9083206, 51.1145199, 13.910595, 51.1145012],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Radeberg",
+        "osm_value": "secondary",
+        "postcode": "01454",
+        "name": "Dresdener Straße",
+        "suburb": "Lotzdorf",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.2842976, 51.0970158],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 25088970,
+        "osm_type": "W",
+        "extent": [14.2799879, 51.097437, 14.2886612, 51.0966116],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Neukirch/Lausitz",
+        "osm_value": "primary",
+        "postcode": "01904",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.2313662, 51.0997131],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 23496782,
+        "osm_type": "W",
+        "extent": [14.230748, 51.1002267, 14.2319306, 51.0996108],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Schmölln-Putzkau",
+        "osm_value": "residential",
+        "postcode": "01877",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [13.9609996, 51.148727],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 162745580,
+        "osm_type": "W",
+        "extent": [13.9608049, 51.148727, 13.9609996, 51.1484876],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Wachau",
+        "osm_value": "primary",
+        "postcode": "01454",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.2231545, 51.1032852],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 313490288,
+        "osm_type": "W",
+        "extent": [14.2228061, 51.1032994, 14.2233338, 51.103242],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Schmölln-Putzkau",
+        "osm_value": "primary",
+        "postcode": "01877",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.3701182, 51.0562135],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 260912655,
+        "osm_type": "W",
+        "extent": [14.3701182, 51.0562135, 14.3707081, 51.0560915],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Sohland an der Spree",
+        "osm_value": "primary",
+        "postcode": "02689",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.380718, 51.0959521],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 129434062,
+        "osm_type": "W",
+        "extent": [14.3804794, 51.0966097, 14.3816551, 51.0959521],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Wilthen",
+        "osm_value": "residential",
+        "postcode": "02681",
+        "name": "Dresdener Straße",
+        "state": "Saxony"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.169842, 51.5800641],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 240770034,
+        "osm_type": "W",
+        "extent": [14.1697, 51.580682, 14.1701415, 51.580054],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Welzow",
+        "osm_value": "living_street",
+        "postcode": "03119",
+        "name": "Dresdener Straße",
+        "state": "Brandenburg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [14.1710704, 51.582711],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 175786114,
+        "osm_type": "W",
+        "extent": [14.1701415, 51.5846362, 14.1719289, 51.580682],
+        "country": "Germany",
+        "osm_key": "highway",
+        "city": "Welzow",
+        "osm_value": "residential",
+        "postcode": "03119",
+        "name": "Dresdener Straße",
+        "state": "Brandenburg"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
