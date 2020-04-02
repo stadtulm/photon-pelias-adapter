@@ -51,3 +51,54 @@ it("correctly set a label and name for Grundschule", function() {
     labels
   );
 });
+
+it("correctly set a label and name for Dresdener Straße", function() {
+  const input = require("./dresdener-str.json");
+  const result = translateResults(input);
+
+  const names = result.features.map(x => x.properties.name);
+
+  assert.deepEqual(
+    [
+      "Gewerbegebiet Dresdener Landstraße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße",
+      "Dresdener Straße"
+    ],
+    names
+  );
+
+  const labels = result.features.map(x => x.properties.label);
+
+  assert.deepEqual(
+    [
+      "Gewerbegebiet Dresdener Landstraße, 04451 Borsdorf",
+      "Dresdener Straße, 97437 Haßfurt",
+      "Dresdener Straße, 04746 Hartha",
+      "Dresdener Straße, 04932 Röderland",
+      "Dresdener Straße, 04736 Waldheim",
+      "Dresdener Straße, 02681 Wilthen",
+      "Dresdener Straße, 01454 Radeberg",
+      "Dresdener Straße, 01904 Neukirch/Lausitz",
+      "Dresdener Straße, 01877 Schmölln-Putzkau",
+      "Dresdener Straße, 01454 Wachau",
+      "Dresdener Straße, 01877 Schmölln-Putzkau",
+      "Dresdener Straße, 02689 Sohland an der Spree",
+      "Dresdener Straße, 02681 Wilthen",
+      "Dresdener Straße, 03119 Welzow",
+      "Dresdener Straße, 03119 Welzow"
+    ],
+    labels
+  );
+});
