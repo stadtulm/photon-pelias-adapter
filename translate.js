@@ -29,7 +29,10 @@ exports.translateResults = photonResult => {
       feature.properties.locality = feature.properties.city;
     }
 
+    // in digitransit name is displayed in the first line and label in the second one
     feature.properties.label = getLabel(feature.properties);
+    // `venue` is also applied to addresses but for the purpose of digitransit it does
+    // not matter: https://github.com/mfdz/digitransit-ui/blob/master/app/util/suggestionUtils.js#L54
     feature.properties.layer = "venue";
 
     peliasResponse.features.push(feature);
