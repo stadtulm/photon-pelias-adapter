@@ -1,0 +1,65 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [8.941464689570829, 48.6604666],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 181514636,
+        "osm_type": "W",
+        "extent": [8.9413802, 48.6605297, 8.9415492, 48.6604034],
+        "country": "Germany",
+        "osm_key": "building",
+        "housenumber": "5",
+        "city": "Ehningen",
+        "street": "Bahnhofstraße",
+        "osm_value": "yes",
+        "postcode": "71139",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.906460461686692, 48.64138985],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 60096654,
+        "osm_type": "W",
+        "extent": [8.9063903, 48.6414391, 8.9065304, 48.641339],
+        "country": "Germany",
+        "osm_key": "building",
+        "housenumber": "5/1",
+        "city": "Gärtringen",
+        "street": "Bahnhofstraße",
+        "osm_value": "yes",
+        "postcode": "71116",
+        "state": "Baden-Württemberg"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [8.906333028179723, 48.64126975],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 60096655,
+        "osm_type": "W",
+        "extent": [8.90626, 48.6413309, 8.9064061, 48.6412086],
+        "country": "Germany",
+        "osm_key": "building",
+        "housenumber": "5",
+        "city": "Gärtringen",
+        "street": "Bahnhofstraße",
+        "osm_value": "yes",
+        "postcode": "71116",
+        "state": "Baden-Württemberg"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
