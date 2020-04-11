@@ -102,3 +102,21 @@ it("correctly set a label and name for Dresdener Straße", function() {
     labels
   );
 });
+
+it("set a label and name for an exact address with house number", function() {
+  const input = require("./address-with-housenumber.json");
+  const { features } = translateResults(input);
+
+  const labels = features.map(x => x.properties.label);
+
+  assert.deepEqual(
+    ["Bahnhofstraße 5, 71139 Ehningen", "Bahnhofstraße 5/1, 71116 Gärtringen", "Bahnhofstraße 5, 71116 Gärtringen"],
+    labels
+  );
+
+  const names = features.map(x => x.properties.name);
+  assert.deepEqual(
+    ["Bahnhofstraße 5, 71139 Ehningen", "Bahnhofstraße 5/1, 71116 Gärtringen", "Bahnhofstraße 5, 71116 Gärtringen"],
+    names
+  );
+});
