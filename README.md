@@ -3,21 +3,21 @@ We use this to replace pelias with photon in [digitransit-ui](https://github.com
 
 Supported pelias APIs:
 
-- `/v1/search`
-- `/v1/reverse`
+* `/v1/search`
+* `/v1/reverse`
 
 Supported pelias paramters:
-
-- for `search`
-  _ `text`
-  _ `boundary.rect`
-  _ `focus.point`
-  _ `lang` \* returns empty results, if `sources` contains `gtfs`.
-- for `reverse`
-  _ `point.lat` and `point.lon`
-  _ `lang`
+* for `search`
+	* `text`
+	* `boundary.rect`
+	* `focus.point`
+	* `lang`
+	* returns empty results, if `sources` contains `gtfs`.
+* for `reverse`
+	* `point.lat` and `point.lon`
+	* `lang`
 
 Configuration:
 
-- Set port via `PORT` environment variable. Default `8080`.
-- Set Photon endpoint via environment variable `PHOTON_URL`. Default `https://photon.komoot.de`.
+* Set port via `PORT` environment variable. Default `8080`.
+* Set Photon endpoint via environment variable `PHOTON_URL`. Default `https://photon.komoot.de`.
