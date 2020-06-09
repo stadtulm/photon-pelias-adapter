@@ -10,6 +10,7 @@ Supported pelias paramters:
 * for `search`
 	* `text`
 	* `boundary.rect`
+	* `focus.point`
 	* `lang`
 	* returns empty results, if `sources` contains `gtfs`.
 * for `reverse`

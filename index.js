@@ -28,6 +28,7 @@ http
 
 function search(params, res) {
   let bboxParam = null;
+  let focusParam = null;
 
   //ignore GTFS stop requests. Used by digitransit
   if (params["sources"] && params["sources"].includes("gtfs")) {
@@ -51,9 +52,16 @@ function search(params, res) {
     },${params["boundary.rect.max_lat"]}`;
   }
 
+  if (params["focus.point.lat"] && params["focus.point.lon"]) {
+    focusParam = `&lon=${params["focus.point.lon"]}&lat=${params["focus.point.lat"]}`;
+  }
+
   let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}`;
   if (bboxParam) {
     url += bboxParam;
+  }
+  if (focusParam) {
+    url += focusParam;
   }
   fetch(url)
     .then(res => res.json())
