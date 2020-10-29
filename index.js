@@ -31,7 +31,11 @@ function search(params, res) {
   let focusParam = null;
 
   //ignore GTFS stop requests. Used by digitransit
-  if (params["sources"] && params["sources"].split(",").includes("gtfs")) {
+  if (
+    params["sources"] &&
+    params["sources"].split(",").length == 1 &&
+    params["sources"].split(",")[0].startsWith("gtfs")
+  ) {
     res.writeHead(404, {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
