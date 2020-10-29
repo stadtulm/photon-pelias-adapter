@@ -30,7 +30,7 @@ function search(params, res) {
   let bboxParam = null;
 
   //ignore GTFS stop requests. Used by digitransit
-  if (params["sources"] && params["sources"].includes("gtfs")) {
+  if (params["sources"] && params["sources"].split(",").includes("gtfs")) {
     res.writeHead(404, {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
