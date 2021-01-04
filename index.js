@@ -36,7 +36,7 @@ function search(params, res) {
     params["sources"].split(",").length == 1 &&
     params["sources"].split(",")[0].startsWith("gtfs")
   ) {
-    res.writeHead(404, {
+    res.writeHead(200, {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
     });
