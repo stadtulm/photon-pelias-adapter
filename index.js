@@ -60,7 +60,7 @@ function search(params, res) {
     focusParam = `&lon=${params["focus.point.lon"]}&lat=${params["focus.point.lat"]}`;
   }
 
-  let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}`;
+  let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}&osm_tag=!boundary`;
   if (bboxParam) {
     url += bboxParam;
   }
