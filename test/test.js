@@ -120,3 +120,11 @@ it("set a label and name for an exact address with house number", function() {
     names
   );
 });
+
+it("returns bus_stop in layer stop with ifopt as gtfs id", function() {
+  const input = require("./bus-stop.json");
+  const result = translateResults(input, "mydataset");
+  assert.equal(result.features[0].properties.name, "Fanny-Leicht-Straße");
+  assert.equal(result.features[0].properties.id, "GTFS:mydataset:de:08111:6012");
+  assert.equal(result.features[0].properties.layer, "stop");
+});

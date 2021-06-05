@@ -1,0 +1,31 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [9.1170556, 48.72986],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "osm_id": 332572957,
+        "country": "Deutschland",
+        "city": "Stuttgart",
+        "countrycode": "DE",
+        "postcode": "70563",
+        "locality": "Vaihingen",
+        "type": "house",
+        "osm_type": "N",
+        "osm_key": "highway",
+        "street": "M\u00f6hringer Landstra\u00dfe",
+        "district": "Vaihingen-Mitte",
+        "extra": {
+          "ref:IFOPT": "de:08111:6012:1:4"
+        },
+        "osm_value": "bus_stop",
+        "name": "Fanny-Leicht-Stra\u00dfe",
+        "state": "Baden-W\u00fcrttemberg"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
