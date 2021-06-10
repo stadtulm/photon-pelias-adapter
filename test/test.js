@@ -50,6 +50,9 @@ it("correctly set a label and name for Grundschule", function() {
     ],
     labels
   );
+
+  const c = result.features.map(x => x.properties.confidence);
+  assert.deepEqual([100, 99, 98, 97, 96, 95, 94, 93, 92], c);
 });
 
 it("correctly set a label and name for Dresdener Straße", function() {

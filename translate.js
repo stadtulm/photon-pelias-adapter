@@ -29,7 +29,7 @@ exports.translateResults = (photonResult, gtfsDataset = "") => {
   let peliasResponse = {
     features: []
   };
-  photonResult.features.forEach(feature => {
+  photonResult.features.forEach((feature, idx) => {
     if (feature.properties.state) {
       feature.properties.region = feature.properties.state;
       delete feature.properties.state;
@@ -65,6 +65,8 @@ exports.translateResults = (photonResult, gtfsDataset = "") => {
       }
       feature.properties.id = "GTFS:" + gtfsDataset + ":" + ifoptid;
     }
+
+    feature.properties.confidence = 100 - idx;
 
     peliasResponse.features.push(feature);
   });
