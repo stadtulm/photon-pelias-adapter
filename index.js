@@ -35,7 +35,15 @@ function search(params, res) {
   if (params["layers"] && params["layers"].includes("bikestation")) {
     // HSL-DT offers bikesharing, stadtnavi generalizes that to vehicle_sharing
     // so we widden the search
-    filterParam = "&osm_tag=amenity:car_sharing&osm_tag=amenity:bike_rental";
+    // filterParam = "&osm_tag=amenity:car_sharing&osm_tag=amenity:bike_rental";
+
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    });
+    res.write(JSON.stringify({ error: "no gtfs", features: [] }));
+    res.end();
+    return;
   } else if (
     params["sources"] &&
     params["sources"].split(",").length == 1 &&
@@ -81,7 +89,6 @@ function search(params, res) {
     url += focusParam;
   }
   url += filterParam;
-  console.log(url);
 
   fetch(url)
     .then(res => res.json())
