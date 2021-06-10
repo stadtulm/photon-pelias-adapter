@@ -41,15 +41,20 @@ function search(params, res) {
     params["sources"].split(",").length == 1 &&
     params["sources"].split(",")[0].startsWith("gtfs")
   ) {
-    // Return bus/tram stops for GTFS stop requests.
-    filterParam = "&osm_tag=:bus_stop&osm_tag=:tram_stop&osm_tag=railway:station";
-    if ((gtfs = /^gtfs(\w*)/.exec(params["sources"])) != null) {
-      optionalGtfsDataset = gtfs[1];
-    }
+    res.writeHead(404, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    });
+    res.write(JSON.stringify({ error: "no gtfs", features: [] }));
+    res.end();
+    return;
   } else {
     filterParam =
       "&osm_tag=!amenity:car_sharing&osm_tag=!amenity:bike_rental&osm_tag=!boundary" +
-      "&osm_tag=!railway:station&osm_tag=:!bus_stop&osm_tag=:!tram_stop&osm_tag=:!platform&osm_tag=!stop_position";
+      // Temporarilly return stops and stations for any non bikestation request,
+      // as DT not yet sends focus / bounding box
+      // "&osm_tag=!railway:station&osm_tag=:!bus_stop&osm_tag=:!tram_stop" +
+      "&osm_tag=:!platform&osm_tag=!stop_position";
   }
 
   if (
