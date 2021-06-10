@@ -51,6 +51,7 @@ function search(params, res) {
   } else {
     filterParam =
       "&osm_tag=!amenity:car_sharing&osm_tag=!amenity:bike_rental&osm_tag=!boundary" +
+      "&osm_tag=!landuse:construction" +
       // Temporarilly return stops and stations for any non bikestation request,
       // as DT not yet sends focus / bounding box
       // "&osm_tag=!railway:station&osm_tag=:!bus_stop&osm_tag=:!tram_stop" +
