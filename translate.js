@@ -25,7 +25,7 @@ const getName = properties => {
   } else return label;
 };
 
-exports.translateResults = photonResult => {
+exports.translateResults = (photonResult, gtfsDataset = "") => {
   let peliasResponse = {
     features: []
   };
@@ -45,9 +45,26 @@ exports.translateResults = photonResult => {
     // in digitransit name is displayed in the first line and label in the second one
     feature.properties.label = getLabel(feature.properties);
     feature.properties.name = getName(feature.properties);
-    // `venue` is also applied to addresses but for the purpose of digitransit it does
-    // not matter: https://github.com/mfdz/digitransit-ui/blob/master/app/util/suggestionUtils.js#L54
-    feature.properties.layer = "venue";
+
+    if (feature.properties.osm_value == "bus_stop" || feature.properties.osm_value == "tram_stop") {
+      feature.properties.layer = "stop";
+    } else if (feature.properties.osm_key == "railway" && feature.properties.osm_value == "station") {
+      feature.properties.layer = "station";
+    } else {
+      // `venue` is also applied to addresses but for the purpose of digitransit it does
+      // not matter: https://github.com/mfdz/digitransit-ui/blob/master/app/util/suggestionUtils.js#L54
+      feature.properties.layer = "venue";
+    }
+
+    if (feature.properties.extra && feature.properties.extra["ref:IFOPT"]) {
+      // TODO supply dataset name (now fixed to hbg) as param to translateResults
+      let ifoptid = feature.properties.extra["ref:IFOPT"];
+      parentId = /^\w*:\w*:\w*/.exec(ifoptid);
+      if (parentId) {
+        ifoptid = parentId[0];
+      }
+      feature.properties.id = "GTFS:" + gtfsDataset + ":" + ifoptid;
+    }
 
     peliasResponse.features.push(feature);
   });

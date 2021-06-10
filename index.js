@@ -29,20 +29,27 @@ http
 function search(params, res) {
   let bboxParam = null;
   let focusParam = null;
+  let filterParam = null;
+  let optionalGtfsDataset = "";
 
-  //ignore GTFS stop requests. Used by digitransit
-  if (
+  if (params["layers"] && params["layers"].includes("bikestation")) {
+    // HSL-DT offers bikesharing, stadtnavi generalizes that to vehicle_sharing
+    // so we widden the search
+    filterParam = "&osm_tag=amenity:car_sharing&osm_tag=amenity:bike_rental";
+  } else if (
     params["sources"] &&
     params["sources"].split(",").length == 1 &&
     params["sources"].split(",")[0].startsWith("gtfs")
   ) {
-    res.writeHead(200, {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-    });
-    res.write(JSON.stringify({ error: "no gtfs", features: [] }));
-    res.end();
-    return;
+    // Return bus/tram stops for GTFS stop requests.
+    filterParam = "&osm_tag=:bus_stop&osm_tag=:tram_stop&osm_tag=railway:station";
+    if ((gtfs = /^gtfs(\w*)/.exec(params["sources"])) != null) {
+      optionalGtfsDataset = gtfs[1];
+    }
+  } else {
+    filterParam =
+      "&osm_tag=!amenity:car_sharing&osm_tag=!amenity:bike_rental&osm_tag=!boundary" +
+      "&osm_tag=!railway:station&osm_tag=:!bus_stop&osm_tag=:!tram_stop&osm_tag=:!platform&osm_tag=!stop_position";
   }
 
   if (
@@ -60,13 +67,16 @@ function search(params, res) {
     focusParam = `&lon=${params["focus.point.lon"]}&lat=${params["focus.point.lat"]}`;
   }
 
-  let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}&osm_tag=!boundary`;
+  let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}`;
   if (bboxParam) {
     url += bboxParam;
   }
   if (focusParam) {
     url += focusParam;
   }
+  url += filterParam;
+  console.log(url);
+
   fetch(url)
     .then(res => res.json())
     .then(json => {
@@ -78,7 +88,7 @@ function search(params, res) {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
       });
-      res.write(JSON.stringify(translateResults(json)));
+      res.write(JSON.stringify(translateResults(json, optionalGtfsDataset)));
       res.end();
     })
     .catch(err => {
