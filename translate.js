@@ -67,6 +67,7 @@ exports.translateResults = (photonResult, gtfsDataset = "") => {
     }
 
     feature.properties.confidence = 100 - idx;
+    feature.properties.source = "openstreetmap";
 
     peliasResponse.features.push(feature);
   });
