@@ -26,6 +26,19 @@ http
   })
   .listen(PORT);
 
+const OSM_TAG_EXCLUSIONS = [
+  "amenity:car_sharing",
+  "amenity:bike_rental",
+  "boundary",
+  "landuse:construction",
+  "highway:service",
+  // exclude unneccessarily detailed public transport nodes
+  "stop_position",
+  "highway=platform",
+  "railway=platform",
+  "public_transport=platform"
+];
+
 function search(params, res) {
   let bboxParam = null;
   let focusParam = null;
@@ -33,10 +46,6 @@ function search(params, res) {
   let optionalGtfsDataset = "";
 
   if (params["layers"] && params["layers"].includes("bikestation")) {
-    // HSL-DT offers bikesharing, stadtnavi generalizes that to vehicle_sharing
-    // so we widden the search
-    // filterParam = "&osm_tag=amenity:car_sharing&osm_tag=amenity:bike_rental";
-
     res.writeHead(200, {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
@@ -57,13 +66,7 @@ function search(params, res) {
     res.end();
     return;
   } else {
-    filterParam =
-      "&osm_tag=!amenity:car_sharing&osm_tag=!amenity:bike_rental&osm_tag=!boundary" +
-      "&osm_tag=!landuse:construction" +
-      // Temporarilly return stops and stations for any non bikestation request,
-      // as DT not yet sends focus / bounding box
-      // "&osm_tag=!railway:station&osm_tag=:!bus_stop&osm_tag=:!tram_stop" +
-      "&osm_tag=:!platform&osm_tag=!stop_position";
+    filterParam = OSM_TAG_EXCLUSIONS.map(e => `&osm_tag=!${e}`).join("");
   }
 
   if (
