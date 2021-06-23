@@ -26,18 +26,19 @@ http
   })
   .listen(PORT);
 
-const OSM_TAG_EXCLUSIONS = [
-  "amenity:car_sharing",
-  "amenity:bike_rental",
-  "boundary",
-  "landuse:construction",
-  "highway:service",
-  // exclude unneccessarily detailed public transport nodes
-  "stop_position",
-  "highway=platform",
-  "railway=platform",
-  "public_transport=platform"
+const OSM_TAG_FILTERS = [
+  "!amenity:car_sharing",
+  "!amenity:bike_rental",
+  "!boundary",
+  "!landuse:construction",
+  "!highway:service",
+  //  exclude unneccessarily detailed public transport nodes
+  ":!stop_position",
+  ":!platform",
+  "!tunnel:yes"
 ];
+
+const DEFAULT_ZOOM_FACTOR = 14;
 
 function search(params, res) {
   let bboxParam = null;
@@ -66,7 +67,7 @@ function search(params, res) {
     res.end();
     return;
   } else {
-    filterParam = OSM_TAG_EXCLUSIONS.map(e => `&osm_tag=!${e}`).join("");
+    filterParam = OSM_TAG_FILTERS.map(e => `&osm_tag=${e}`).join("");
   }
 
   if (
@@ -82,6 +83,7 @@ function search(params, res) {
 
   if (params["focus.point.lat"] && params["focus.point.lon"]) {
     focusParam = `&lon=${params["focus.point.lon"]}&lat=${params["focus.point.lat"]}`;
+    focusParam += `&zoom=${DEFAULT_ZOOM_FACTOR}`;
   }
 
   let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}`;
