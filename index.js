@@ -35,7 +35,10 @@ const OSM_TAG_FILTERS = [
   //  exclude unneccessarily detailed public transport nodes
   ":!stop_position",
   ":!platform",
-  "!tunnel:yes"
+  "!tunnel:yes",
+  "!place:county",
+  "!railway:razed",
+  "!landuse:military"
 ];
 
 const DEFAULT_ZOOM_FACTOR = 14;
