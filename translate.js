@@ -51,7 +51,10 @@ exports.translateResults = (photonResult, gtfsDataset = "") => {
 
     if (feature.properties.osm_value == "bus_stop" || feature.properties.osm_value == "tram_stop") {
       feature.properties.layer = "stop";
-    } else if (feature.properties.osm_key == "railway" && feature.properties.osm_value == "station") {
+    } else if (
+      feature.properties.osm_key == "railway" &&
+      (feature.properties.osm_value == "station" || feature.properties.osm_value == "halt")
+    ) {
       feature.properties.layer = "station";
     } else {
       // `venue` is also applied to addresses but for the purpose of digitransit it does
