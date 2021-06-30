@@ -42,6 +42,7 @@ const OSM_TAG_FILTERS = [
 ];
 
 const DEFAULT_ZOOM_FACTOR = 14;
+const DEFAULT_LOCATION_BIAS_SCALE = 0.5;
 
 function search(params, res) {
   let bboxParam = null;
@@ -87,6 +88,7 @@ function search(params, res) {
   if (params["focus.point.lat"] && params["focus.point.lon"]) {
     focusParam = `&lon=${params["focus.point.lon"]}&lat=${params["focus.point.lat"]}`;
     focusParam += `&zoom=${DEFAULT_ZOOM_FACTOR}`;
+    focusParam += `&location_bias_scale=${DEFAULT_LOCATION_BIAS_SCALE}`;
   }
 
   let url = `${PHOTON_URL}/api/?q=${encodeURIComponent(params.text)}&lang=${params.lang || "en"}`;
